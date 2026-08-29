@@ -24,10 +24,10 @@
 /.npmrc                    @Unity-Billal-mesloub
 
 # CI and repo automation
-/.github/workflows/        @jasonsaayman
-/.github/CODEOWNERS        @jasonsaayman
-/.github/dependabot.yml    @jasonsaayman
+/.github/workflows/        @Unity-Billal-mesloub
+/.github/CODEOWNERS        @Unity-Billal-mesloub
+/.github/dependabot.yml    @Unity-Billal-mesloub
 
 # Security-critical docs
-/THREATMODEL.md            @jasonsaayman
-/SECURITY.md               @jasonsaayman
+/THREATMODEL.md            @Unity-Billal-mesloub
+/SECURITY.md               @Unity-Billal-mesloub
