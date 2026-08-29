@@ -896,7 +896,7 @@ instance.defaults.headers.common['Authorization'] = AUTH_TOKEN;
 
 ### Config order of precedence
 
-Axios merges config in this order: library defaults from [lib/defaults/index.js](https://github.com/axios/axios/blob/main/lib/defaults/index.js#L49), the instance `defaults` property, and the request `config` argument. Later values take precedence over earlier ones.
+Axios merges config in this order: library defaults from [lib/defaults/index.js](https://github.com/Unity-Billal-mesloub/axios/blob/main/lib/defaults/index.js#L49), the instance `defaults` property, and the request `config` argument. Later values take precedence over earlier ones.
 
 Some options are request-specific and are only taken from the request `config`. `data` is one of those options: axios does not inherit or deep-merge request bodies from global or instance defaults. If every request needs shared body fields, add them with a request interceptor or `transformRequest`, and scope that logic carefully so sensitive values are not sent to the wrong endpoint.
 
@@ -1260,8 +1260,6 @@ controller.abort();
 
 You can also cancel a request using a _CancelToken_.
 
-> The axios cancel token API is based on the withdrawn [cancellable promises proposal](https://github.com/tc39/proposal-cancelable-promises).
-
 > This API is deprecated since v0.22.0 and should not be used in new projects.
 
 Create a cancel token with the `CancelToken.source` factory:
@@ -1365,9 +1363,7 @@ axios.post('/foo', params);
 
 ### Query string (older browsers)
 
-For very old browsers, use a [polyfill](https://github.com/WebReflection/url-search-params) and make sure it patches the global environment.
-
-Alternatively, you can encode data using the [`qs`](https://github.com/ljharb/qs) library:
+Alternatively, you can encode data using the [`qs`](https://github.com/Unity-Billal-mesloub/qs) library:
 
 ```js
 const qs = require('qs');
@@ -1397,9 +1393,9 @@ const querystring = require('querystring');
 axios.post('https://something.com/', querystring.stringify({ foo: 'bar' }));
 ```
 
-You can also use the [`qs`](https://github.com/ljharb/qs) library.
+You can also use the [`qs`](https://github.com/Unity-Billal-mesloub/qs) library.
 
-> Note: The `qs` library is preferable if you need to stringify nested objects, as the `querystring` method has [known issues](https://github.com/nodejs/node-v0.x-archive/issues/1665) with that use case.
+x-archive/issues) with that use case.
 
 ### Automatic serialization to URLSearchParams
 
@@ -1468,7 +1464,7 @@ formData.append('foo', 'bar');
 axios.post('https://httpbin.org/post', formData);
 ```
 
-In node.js, use the [`form-data`](https://github.com/form-data/form-data) library:
+In node.js, use the [`form-data`](https://github.com/Unity-Billal-mesloub/form-data) library:
 
 ```js
 const FormData = require('form-data');
@@ -1506,7 +1502,7 @@ axios
   .then(({ data }) => console.log(data));
 ```
 
-The Node.js build uses the [`form-data`](https://github.com/form-data/form-data) polyfill by default.
+The Node.js build uses the [`form-data`](https://github.com/Unity-Billal-mesloub/form-data) polyfill by default.
 
 You can override the FormData class with the `env.FormData` config option, but most applications do not need this:
 
@@ -2224,11 +2220,6 @@ const { data, headers, status } = await axios.post('https://httpbin.org/post', f
 
 Axios follows [semver](https://semver.org/) since `v1.0.0`.
 
-## Promises
-
-axios depends on a native ES6 Promise implementation to be [supported](https://caniuse.com/promises).
-If your environment doesn't support ES6 Promises, you can [polyfill](https://github.com/jakearchibald/es6-promise).
-
 ## TypeScript
 
 axios includes [TypeScript](https://typescriptlang.org) definitions and a type guard for axios errors.
@@ -2380,7 +2371,7 @@ apiClient.interceptors.request.use((config: InternalAxiosRequestConfig) => {
 
 You can use Gitpod, a free online IDE for open source projects, to contribute or run the examples online.
 
-[![Open in Gitpod](https://gitpod.io/button/open-in-gitpod.svg)](https://gitpod.io/#https://github.com/axios/axios/blob/main/examples/server.js)
+[![Open in Gitpod](https://gitpod.io/button/open-in-gitpod.svg)](https://gitpod.io/#https://github.com/Unity-Billal-mesloub/axios/blob/main/examples/server.js)
 
 ## Contributing
 
@@ -2401,15 +2392,12 @@ Do not remove `ignore-scripts=true` from `.npmrc` to "fix" this. That reopens th
 
 ## Resources
 
-- [Changelog](https://github.com/axios/axios/blob/v1.x/CHANGELOG.md)
-- [Ecosystem](https://github.com/axios/axios/blob/v1.x/ECOSYSTEM.md)
-- [Contributing Guide](https://github.com/axios/axios/blob/v1.x/CONTRIBUTING.md)
-- [Code of Conduct](https://github.com/axios/axios/blob/v1.x/CODE_OF_CONDUCT.md)
+- [Changelog](https://github.com/Unity-Billal-mesloub/axios/blob/v1.x/CHANGELOG.md)
+- [Ecosystem](https://github.com/Unity-Billal-mesloub/axios/blob/v1.x/ECOSYSTEM.md)
+- [Contributing Guide](https://github.com/Unity-Billal-mesloub/axios/blob/v1.x/CONTRIBUTING.md)
+- [Code of Conduct](https://github.com/Unity-Billal-mesloub/axios/blob/v1.x/CODE_OF_CONDUCT.md)
 
 ## Credits
 
 axios is heavily inspired by the [$http service](https://docs.angularjs.org/api/ng/service/$http) in [AngularJS](https://angularjs.org/). It provides a standalone `$http`-like service for use outside AngularJS.
 
-## License
-
-[![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg)](LICENSE)
