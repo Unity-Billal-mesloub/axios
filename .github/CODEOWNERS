@@ -9,19 +9,19 @@
 # for when additional maintainers are added.
 
 # Default owner
-*                          @jasonsaayman
+*                          @Unity-Billal-mesloub
 
 # Runtime source — shipped to every consumer
-/lib/                      @jasonsaayman
-/index.js                  @jasonsaayman
-/index.d.ts                @jasonsaayman
-/index.d.cts               @jasonsaayman
+/lib/                      @Unity-Billal-mesloub
+/index.js                  @Unity-Billal-mesloub
+/index.d.ts                @Unity-Billal-mesloub
+/index.d.cts               @Unity-Billal-mesloub
 
 # Build / release infrastructure
-/rollup.config.js          @jasonsaayman
-/package.json              @jasonsaayman
-/package-lock.json         @jasonsaayman
-/.npmrc                    @jasonsaayman
+/rollup.config.js          @Unity-Billal-mesloub
+/package.json              @Unity-Billal-mesloub
+/package-lock.json         @Unity-Billal-mesloub
+/.npmrc                    @Unity-Billal-mesloub
 
 # CI and repo automation
 /.github/workflows/        @jasonsaayman
