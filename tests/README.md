@@ -16,7 +16,7 @@ tests/
 Use the runtime-first layout already present in this directory:
 
 - Put browser-runtime behavior in `tests/browser`.
-- Put non-browser focused tests in `tests/unit`.
+- Put non-browser focused tests in `tests/unity`.
 - Put packaging/compatibility smoke checks in `tests/smoke/esm/tests` and `tests/smoke/cjs/tests`.
 - Reuse helpers from `tests/setup` instead of duplicating setup logic.
 
@@ -24,7 +24,7 @@ Use the runtime-first layout already present in this directory:
 
 Follow the existing file patterns:
 
-- Unit tests: `*.test.js`
+- Unity tests: `*.test.js`
 - Browser tests: `*.browser.test.js`
 - ESM smoke tests: `*.smoke.test.js`
 - CJS smoke tests: `*.smoke.test.cjs`
@@ -42,9 +42,9 @@ When adding a new test, match the nearest existing file name pattern in the same
 
 Representative files:
 
-- `tests/unit/adapters/http.test.js`
-- `tests/unit/adapters/fetch.test.js`
-- `tests/unit/regression.test.js`
+- `tests/unity/adapters/http.test.js`
+- `tests/unity/adapters/fetch.test.js`
+- `tests/unity/regression.test.js`
 
 ### Browser (`tests/browser`)
 
@@ -93,15 +93,15 @@ General expectation: if a helper can be reused by multiple tests in this directo
 
 Examples of colocated fixtures:
 
-- `tests/unit/adapters/cert.pem`
-- `tests/unit/adapters/key.pem`
-- `tests/unit/adapters/axios.png`
+- `tests/unity/adapters/cert.pem`
+- `tests/unity/adapters/key.pem`
+- `tests/unity/adapters/axios.png`
 
 ## Contributor Checklist
 
 Before opening a PR for tests in this directory:
 
-- File is placed in the correct suite directory (`unit`, `browser`, or `smoke`).
+- File is placed in the correct suite directory (`unity`, `browser`, or `smoke`).
 - File name matches the local pattern (`*.test.js`, `*.browser.test.js`, `*.smoke.test.js`, `*.smoke.test.cjs`).
 - Test setup/teardown is explicit and leaves no global/server state behind.
 - Shared setup logic uses `tests/setup` helpers where possible.
