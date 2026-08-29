@@ -10,7 +10,7 @@ tests/
   browser/   # browser runtime tests
   setup/     # shared test setup utilities
   smoke/     # package-compat smoke suites (esm + cjs)
-  unit/      # focused unit/behavior tests
+  unit/      # focused unity/behavior tests
 ```
 
 Use the runtime-first layout already present in this directory:
